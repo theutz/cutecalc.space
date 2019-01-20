@@ -1,13 +1,38 @@
 import theme from 'styled-theming';
 
 export const bgColor = theme('mode', {
-  light: 'white',
-  dark: 'black'
+  light: '#f8f8f8',
+  dark: '#333'
 });
 
 export const fgColor = theme('mode', {
-  light: 'black',
-  dark: 'white'
+  light: '#333',
+  dark: '#f8f8f8'
+});
+
+export const primaryColor = theme('mode', {
+  light: '#ff5714',
+  dark: '#1be7ff'
+});
+
+export const accent2 = theme('mode', {
+  light: '#6eeb83',
+  dark: '#6eeb83'
+});
+
+export const accent3 = theme('mode', {
+  light: '#e4ff1a',
+  dark: '#e4ff1a'
+});
+
+export const accent4 = theme('mode', {
+  light: '#ffb800',
+  dark: '#ffb800'
+});
+
+export const accent5 = theme('mode', {
+  light: '#1be7ff',
+  dark: '#ff5714'
 });
 
 export const displayFontName = theme('font', {

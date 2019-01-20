@@ -1,16 +1,4 @@
-### Color Modes
-
-#### Light
-
-```jsx
-const { ThemeProvider } = require('styled-components');
-
-<ThemeProvider theme={{ mode: 'dark', font: 'coiny' }}>
-  <Header />
-</ThemeProvider>;
-```
-
-#### Dark
+### Default Styles
 
 ```jsx
 const { ThemeProvider } = require('styled-components');
@@ -20,9 +8,9 @@ const { ThemeProvider } = require('styled-components');
 </ThemeProvider>;
 ```
 
-### Font Modes
+### Variants — Color
 
-#### Coiny
+#### Dark
 
 ```jsx
 const { ThemeProvider } = require('styled-components');
@@ -32,12 +20,14 @@ const { ThemeProvider } = require('styled-components');
 </ThemeProvider>;
 ```
 
+### Variants — Font
+
 #### Acme
 
 ```jsx
 const { ThemeProvider } = require('styled-components');
 
-<ThemeProvider theme={{ mode: 'dark', font: 'acme' }}>
+<ThemeProvider theme={{ mode: 'light', font: 'acme' }}>
   <Header />
 </ThemeProvider>;
 ```

@@ -2,7 +2,13 @@ import React, { SFC, useContext } from 'react';
 
 import config from '../../config';
 import styled from 'styled-components';
-import { bgColor, fgColor, displayFontName } from '../../theme/selectors';
+import {
+  bgColor,
+  fgColor,
+  displayFontName,
+  primaryColor,
+  accent5
+} from '../../theme/selectors';
 import { modularScale } from 'polished';
 
 const { title } = config;
@@ -17,7 +23,6 @@ const Header: SFC<Props> = (props) => {
 
 const Wrapper = styled.div`
   background-color: ${bgColor};
-  color: ${fgColor};
   display: flex;
   justify-content: center;
 `;
@@ -25,6 +30,7 @@ const Wrapper = styled.div`
 const Title = styled.h1`
 	font-family: '${displayFontName}', cursive;
 	font-size: ${modularScale(3)};
+	color: ${primaryColor};
 `;
 
 interface Props {
