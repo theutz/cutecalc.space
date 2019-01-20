@@ -4,13 +4,24 @@ import Header from './components/Header';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { normalize } from 'polished';
 import ThemeContext, { Context as IThemeContext } from './contexts/theme';
+import Helmet from 'react-helmet';
+import { displayFontName } from './theme/selectors';
 
 const App = () => {
   const [mode, setMode] = useState<IThemeContext['mode']>('light');
+  const [font, setFont] = useState<IThemeContext['font']>('coiny');
+
+  const theme = { mode, font };
+  const fontUrl = `https://fonts.googleapis.com/css?family=${displayFontName({
+    theme
+  })}`;
 
   return (
-    <ThemeContext.Provider value={{ mode, setMode }}>
-      <ThemeProvider theme={{ mode }}>
+    <ThemeContext.Provider value={{ mode, setMode, setFont, font }}>
+      <Helmet>
+        <link href={fontUrl} rel="stylesheet" />
+      </Helmet>
+      <ThemeProvider theme={theme}>
         <>
           <GlobalStyle />
           <Wrapper>

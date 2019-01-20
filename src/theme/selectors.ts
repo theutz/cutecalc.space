@@ -9,3 +9,8 @@ export const fgColor = theme('mode', {
   light: 'black',
   dark: 'white'
 });
+
+export const displayFontName = theme('font', {
+  coiny: 'Coiny',
+  acme: 'Acme'
+});
