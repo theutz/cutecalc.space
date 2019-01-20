@@ -15,22 +15,22 @@ export const primaryColor = theme('mode', {
   dark: '#1be7ff'
 });
 
-export const accent2 = theme('mode', {
+export const accent1 = theme('mode', {
   light: '#6eeb83',
   dark: '#6eeb83'
 });
 
-export const accent3 = theme('mode', {
+export const accent2 = theme('mode', {
   light: '#e4ff1a',
   dark: '#e4ff1a'
 });
 
-export const accent4 = theme('mode', {
+export const accent3 = theme('mode', {
   light: '#ffb800',
   dark: '#ffb800'
 });
 
-export const accent5 = theme('mode', {
+export const accent4 = theme('mode', {
   light: '#1be7ff',
   dark: '#ff5714'
 });

@@ -1,14 +1,8 @@
-import React, { SFC, useContext } from 'react';
+import React, { SFC } from 'react';
 
 import config from '../../config';
 import styled from 'styled-components';
-import {
-  bgColor,
-  fgColor,
-  displayFontName,
-  primaryColor,
-  accent5
-} from '../../theme/selectors';
+import { bgColor, displayFontName, primaryColor } from '../../theme/selectors';
 import { modularScale } from 'polished';
 
 const { title } = config;
