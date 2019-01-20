@@ -5,7 +5,8 @@ import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { normalize } from 'polished';
 import ThemeContext, { Context as IThemeContext } from './contexts/theme';
 import Helmet from 'react-helmet';
-import { displayFontName } from './theme/selectors';
+import { displayFontName, accent3, fgColor, bgColor } from './theme/selectors';
+import NumberPad from './components/NumberPad';
 
 const App = () => {
   const [mode, setMode] = useState<IThemeContext['mode']>('light');
@@ -26,8 +27,10 @@ const App = () => {
           <GlobalStyle />
           <Wrapper>
             <StyledHeader />
-            <Main />
-            <Footer />
+            <Main>
+              <NumberPad />
+            </Main>
+            <Footer>Copyright &copy; 2019</Footer>
           </Wrapper>
         </>
       </ThemeProvider>
@@ -37,6 +40,11 @@ const App = () => {
 
 const GlobalStyle = createGlobalStyle`
   ${normalize()};
+  
+  html {
+    font-family: ${displayFontName}, sans-serif;
+    font-size: 16px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -56,7 +64,12 @@ const Main = styled.main`
 `;
 
 const Footer = styled.footer`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-area: footer;
+  background: ${accent3};
+  color: ${bgColor};
 `;
 
 export default App;
