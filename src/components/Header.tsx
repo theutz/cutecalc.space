@@ -1,9 +1,10 @@
 import React, { SFC } from "react";
+import config from "../config";
 
-const Header: SFC<Props> = () => <div>Header</div>;
+const Header: SFC<Props> = () => <div>{config.title}</div>;
 
 interface Props {
-  className?: string;
+	className?: string;
 }
 
 export default Header;
