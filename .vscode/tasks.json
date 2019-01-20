@@ -15,7 +15,18 @@
       "type": "npm",
       "script": "styleguide",
       "problemMatcher": [],
-      "runOptions": { "runOn": "folderOpen" }
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "type": "typescript",
+      "tsconfig": "tsconfig.json",
+      "option": "watch",
+      "problemMatcher": ["$tsc-watch"],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
     }
   ]
 }
