@@ -4,7 +4,7 @@
 const { ThemeProvider } = require('styled-components');
 
 <ThemeProvider theme={{ mode: 'light', font: 'coiny' }}>
-  <Button>1</Button>
+  <NumberPad />
 </ThemeProvider>;
 ```
 
@@ -16,7 +16,7 @@ const { ThemeProvider } = require('styled-components');
 const { ThemeProvider } = require('styled-components');
 
 <ThemeProvider theme={{ mode: 'dark', font: 'coiny' }}>
-  <Button>1</Button>
+  <NumberPad />
 </ThemeProvider>;
 ```
 
@@ -28,6 +28,6 @@ const { ThemeProvider } = require('styled-components');
 const { ThemeProvider } = require('styled-components');
 
 <ThemeProvider theme={{ mode: 'light', font: 'acme' }}>
-  <Button>1</Button>
+  <NumberPad />
 </ThemeProvider>;
 ```

@@ -19,9 +19,11 @@ const Wrapper = styled.div`
   background-color: ${bgColor};
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 
 const Title = styled.h1`
+margin: 0;
 	font-family: '${displayFontName}', cursive;
 	font-size: ${modularScale(3)};
 	color: ${primaryColor};

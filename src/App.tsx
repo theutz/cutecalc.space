@@ -33,11 +33,11 @@ const App = () => {
           <GlobalStyle />
           <Wrapper>
             <StyledHeader />
-            <Main>
+            <Calculator>
               <History>History</History>
               <CurrentValue>123</CurrentValue>
               <StyledNumberPad />
-            </Main>
+            </Calculator>
             <Footer>Copyright &copy; 2019</Footer>
           </Wrapper>
         </>
@@ -57,10 +57,14 @@ const GlobalStyle = createGlobalStyle`
 
 const Wrapper = styled.div`
   display: grid;
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  min-width: 100vw;
   overflow: hidden;
-  grid-template: 'header' 75px 'main' 1fr 'footer' 30px;
+  grid-template:
+    'header' 70px
+    'main' 1fr
+    'footer' 30px
+    / 1fr;
 `;
 
 const StyledNumberPad = styled(NumberPad)`
@@ -79,11 +83,11 @@ const CurrentValue = styled.div`
   grid-area: currentValue;
 `;
 
-const Main = styled.main`
+const Calculator = styled.main`
   background: ${accent1};
   display: grid;
   grid-area: main;
-  grid: 'history' 2fr 'currentValue' 1fr 'numberPad' 3fr;
+  grid: 'history' 2fr 'currentValue' 1fr 'numberPad' 4fr;
 `;
 
 const Footer = styled.footer`
