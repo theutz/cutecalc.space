@@ -5,7 +5,13 @@ import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { normalize } from 'polished';
 import ThemeContext, { Context as IThemeContext } from './contexts/theme';
 import Helmet from 'react-helmet';
-import { displayFontName, accent3, fgColor, bgColor } from './theme/selectors';
+import {
+  displayFontName,
+  accent3,
+  fgColor,
+  bgColor,
+  accent1
+} from './theme/selectors';
 import NumberPad from './components/NumberPad';
 
 const App = () => {
@@ -28,7 +34,9 @@ const App = () => {
           <Wrapper>
             <StyledHeader />
             <Main>
-              <NumberPad />
+              <History>History</History>
+              <CurrentValue>123</CurrentValue>
+              <StyledNumberPad />
             </Main>
             <Footer>Copyright &copy; 2019</Footer>
           </Wrapper>
@@ -55,12 +63,27 @@ const Wrapper = styled.div`
   grid-template: 'header' 75px 'main' 1fr 'footer' 30px;
 `;
 
+const StyledNumberPad = styled(NumberPad)`
+  grid-area: numberPad;
+`;
+
 const StyledHeader = styled(Header)`
   grid-area: header;
 `;
 
+const History = styled.div`
+  grid-area: history;
+`;
+
+const CurrentValue = styled.div`
+  grid-area: currentValue;
+`;
+
 const Main = styled.main`
+  background: ${accent1};
+  display: grid;
   grid-area: main;
+  grid: 'history' 2fr 'currentValue' 1fr 'numberPad' 3fr;
 `;
 
 const Footer = styled.footer`

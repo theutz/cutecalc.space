@@ -8,7 +8,9 @@ export const NumberPad: SFC<Props> = (props) => {
 };
 
 const Wrapper = styled.div`
-  background: ${accent1};
+  background: ${accent4};
+  width: 100%;
+  height: 100%;
 `;
 
 interface Props {
