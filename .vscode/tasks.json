@@ -7,6 +7,14 @@
       "type": "npm",
       "script": "start",
       "problemMatcher": [],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "type": "npm",
+      "script": "styleguide",
+      "problemMatcher": [],
       "runOptions": { "runOn": "folderOpen" }
     }
   ]
